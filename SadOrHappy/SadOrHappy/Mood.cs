@@ -28,10 +28,17 @@ namespace SadOrHappy
         /// <returns></returns>
         public string Analysemood()
         {
-            if (Message.Contains("sad"))
-                return "sad";
-            else
-                return "Happy";
+            try
+            {
+
+                if (Message.Contains("sad"))
+                    return "sad";
+                else
+                    return "Happy";
+            }
+            catch
+            { return "Happy";
+            }
         }
 
 

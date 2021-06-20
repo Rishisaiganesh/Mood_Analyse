@@ -28,6 +28,16 @@ namespace MoodAnalyser.Test
             //Assert
             Assert.AreEqual(expected, obj.Analysemood());
         }
-      
+        [Test]
+        //Mood Should Return Only Happy
+        public void Should_Return_Happy()
+        {
+            // Expected Only happy
+            string expected = "Happy";
+            //Creating An Object
+            Mood happy = new Mood(null);
+            //Assert 
+            Assert.AreEqual(expected, happy.Analysemood());
+        }
     }
 }
