@@ -5,39 +5,30 @@ namespace MoodAnalyser.Test
 {
     public class Tests
     {
-      
+
         [Test]
-       //Returns Sad
+        //Returns Sad
         public void Mood_should_Be_Sad()
         {
-            //Sring Message
-            string expected = "sad";
+            string expected = "Sad";
             //Object
-            Mood mood = new Mood("sad");
+            Mood mood = new Mood("mess");
+            //Act
+            string result = mood.Moodchecking();
             //Assert 
-            Assert.AreEqual(expected, mood.Analysemood());
+            Assert.AreEqual(expected, result);
         }
         [Test]
         //Returns Happy
         public void Mood_Should_be_happy()
         {
-            //String Mesage
             string expected = "Happy";
-            //Creating Object
-            Mood obj = new Mood("Happy");
-            //Assert
-            Assert.AreEqual(expected, obj.Analysemood());
-        }
-        [Test]
-        //Mood Should Return Only Happy
-        public void Should_Return_Happy()
-        {
-            // Expected Only happy
-            string expected = "Happy";
-            //Creating An Object
-            Mood happy = new Mood(null);
+            //Object
+            Mood mood = new Mood("mess");
+            //Act
+            string result = mood.Moodchecking();
             //Assert 
-            Assert.AreEqual(expected, happy.Analysemood());
+            Assert.AreEqual(expected, result);
         }
     }
 }

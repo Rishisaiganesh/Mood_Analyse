@@ -9,38 +9,21 @@ namespace SadOrHappy
 /// Public Mood Analyser
 /// </summary>
     public class Mood
-    {/// <summary>
-    /// Variables
-    /// </summary>
-        private string Message;
-        /// <summary>
-        /// Constructer 
-        /// </summary>
-        /// <param name="mess"></param>
-        public Mood(string mess)
+    {
+        public const string Sadmood = "Iam In sad Mood";
+        public const string Happymood = "Iam in Happy Mood";
+        public string mess;
+        public Mood(string message)
         {
-            //declaring GlobalValue
-            Message = mess;
+            this.mess = message;
         }
-        /// <summary>
-        /// Method to show Mood
-        /// </summary>
-        /// <returns></returns>
-        public string Analysemood()
+        public string Moodchecking()
         {
-            try
-            {
-
-                if (Message.Contains("sad"))
-                    return "sad";
-                else
-                    return "Happy";
-            }
-            catch
-            { return "Happy";
-            }
+            if (mess == Sadmood)
+                return "Sad";
+            if (mess == Happymood)
+                return "Happy";
+            return null;
         }
-
-
     }
-}
+} 
