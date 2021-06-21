@@ -16,6 +16,11 @@ namespace MoodAnalyser.Test
             throw new NotImplementedException();
         }
 
+        internal string Moodchecking(string mess)
+        {
+            throw new NotImplementedException();
+        }
+
         internal string Moodchecking()
         {
             throw new NotImplementedException();

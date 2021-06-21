@@ -19,11 +19,22 @@ namespace SadOrHappy
         }
         public string Moodchecking()
         {
-            if (mess == Sadmood)
-                return "Sad";
-            if (mess == Happymood)
+            try
+            {
+                if (mess == null || mess == string.Empty)
+                    throw new Exception();
+                if (mess == Sadmood)
+                    return "Sad";
+                if (mess == Happymood)
+                    return "Happy";
+            }
+            catch (Exception)
+            {
                 return "Happy";
+            }
             return null;
+                
+           
         }
     }
 } 
